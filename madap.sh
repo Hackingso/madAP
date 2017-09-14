@@ -18,10 +18,6 @@ fi
 EVIL_IFACE=$1
 GOOD_IFACE=$2
 
-service NetworkManager stop
-macchanger -m 00:11:22:33:44:55 $EVIL_IFACE
-service NetworkManager stop
-
 # Enable IP forwarding
 sysctl net.ipv4.ip_forward=1
 
